@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora e Funções de Estoque</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>Calculadora de Financiamento e Funções de Estoque</h1>
+
+    <div class="container">
+        <!-- Verificação de Estoque -->
+        <div class="section">
+            <h2>Verificar Disponibilidade no Estoque</h2>
+            <label for="skuProduto">SKU do Produto:</label>
+            <input type="number" id="skuProduto" placeholder="Digite o SKU">
+            <button onclick="verificarEstoque()">Verificar</button>
+            <p id="resultadoEstoque"></p>
+        </div>
+
+        <!-- Cálculo de Financiamento -->
+        <div class="section">
+            <h2>Calcular Financiamento</h2>
+            <label for="valorProduto">Valor do Produto:</label>
+            <input type="number" id="valorProduto" step="0.01"><br>
+            <label for="numParcelas">Número de Parcelas:</label>
+            <input type="number" id="numParcelas"><br>
+            <label for="taxaJuros">Taxa de Juros Mensal (%):</label>
+            <input type="number" id="taxaJuros" step="0.01"><br>
+            <button onclick="calcularFinanciamento()">Calcular</button>
+            <p id="resultadoFinanciamento"></p>
+        </div>
+
+        <!-- Cálculo de Frete -->
+        <div class="section">
+            <h2>Calcular Frete</h2>
+            <label for="pesoPedido">Peso do Pedido (kg):</label>
+            <input type="number" id="pesoPedido" step="0.01"><br>
+            <label for="distanciaEntrega">Distância para Entrega (km):</label>
+            <input type="number" id="distanciaEntrega"><br>
+            <button onclick="calcularFrete()">Calcular Frete</button>
+            <p id="resultadoFrete"></p>
+        </div>
+
+        <!-- Atualização de Estoque -->
+        <div class="section">
+            <h2>Atualizar Estoque Após Venda</h2>
+            <label for="skuVenda">SKU do Produto Vendido:</label>
+            <input type="number" id="skuVenda"><br>
+            <label for="quantidadeVenda">Quantidade Vendida:</label>
+            <input type="number" id="quantidadeVenda"><br>
+            <button onclick="atualizarEstoque()">Atualizar Estoque</button>
+            <p id="resultadoAtualizacaoEstoque"></p>
+        </div>
+
+        <!-- Relatório de Vendas -->
+        <div class="section">
+            <h2>Gerar Relatório de Vendas</h2>
+            <label for="dataInicio">Data de Início:</label>
+            <input type="date" id="dataInicio"><br>
+            <label for="dataFim">Data de Fim:</label>
+            <input type="date" id="dataFim"><br>
+            <button onclick="gerarRelatorio()">Gerar Relatório</button>
+            <p id="resultadoRelatorio"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
